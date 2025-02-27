@@ -6,7 +6,7 @@ int main() {
     // Taking user input
     printf("");
     scanf("%d", &num);
-    }
+    
     while ((num & 1) == 0) {
         num >>= 1;  
         position++;  
