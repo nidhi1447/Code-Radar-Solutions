@@ -1,14 +1,23 @@
 #include <stdio.h>
 
 void decimalToBinary(unsigned int num) {
-    int i;
-    int bitSize = sizeof(num) * 8; 
+    int i, started = 0; 
 
     printf("");
     
+   
+    for (i = 31; i >= 0; i--) {
+        if ((num >> i) & 1) {
+            started = 1; 
+        }
+        if (started) {
+            printf("%d", (num >> i) & 1);
+        }
+    }
+
     
-    for (i = bitSize - 1; i >= 0; i--) {
-        printf("%d", (num >> i) & 1);
+    if (!started) {
+        printf("0");
     }
 
     printf("\n");
@@ -21,8 +30,9 @@ int main() {
     printf("");
     scanf("%u", &num);
 
-   
+    
     decimalToBinary(num);
 
     return 0;
 }
+
