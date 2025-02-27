@@ -2,13 +2,16 @@
 
 int main() {
     int num;
-
-  
+    
+    
     printf("");
     scanf("%d", &num);
 
     
-    if (num | 1) {
+    int msb_mask = 1 << 31; 
+
+    
+    if (num & msb_mask) {
         printf("Set");
     } else {
         printf("Not Set");
