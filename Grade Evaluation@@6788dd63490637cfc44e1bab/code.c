@@ -13,5 +13,5 @@ int main()
     printf("Average");
     else if(ch=='D')
     printf("Below Average");
-    else 
+    else if(ch=='F')
     printf("Fail");
